@@ -25,56 +25,56 @@ int main ()
 
    
 
-  cout << "Input starting balance: " << endl; 
+  cout << "Input starting balance: "; 
 
   cin >> startBal; 
 
-  cout << "Input annual interest rate: " << endl; 
+  cout << "Input annual interest rate: "; 
 
   cin >> AnnInterestRate; 
 
- sbal=startBal;
+ sbal = startBal;
 
-  mInterestRate=AnnInterestRate/12;
+  mInterestRate = AnnInterestRate/12;
 
 
-  for(int i=0;i<3;i++) 
+  for(int i = 0;i < 3;i++) 
 
   {
        
 
   cout << "\nMonth#" << i+1 << " :" << endl;
 
-  mAmtDeposit=getDeposit();
+  mAmtDeposit = getDeposit();
 
-  mstart=startBal;
+  mstart = startBal;
 
-  startBal+=mAmtDeposit;
+  startBal += mAmtDeposit;
 
-  totDepositAmt+=mAmtDeposit;
+  totDepositAmt += mAmtDeposit;
 
   mAmtwithdrawl=getWithdrawl(startBal);
 
-  startBal-=mAmtwithdrawl;
+  startBal -= mAmtwithdrawl;
 
- totWithdrawlAmt+=mAmtwithdrawl;
+ totWithdrawlAmt += mAmtwithdrawl;
 
-mend=startBal;
+mend = startBal;
 
- mInterest=((mstart+mend)/2)*(mInterestRate/100);
+ mInterest = ((mstart+mend)/2) * (mInterestRate/100);
 
-startBal+=mInterest;
+startBal += mInterest;
 
-    totInterest+=mInterest;
+    totInterest += mInterest;
 
    }
 
-
+{
    cout << "Starting balance: " << sbal << endl;
 
    cout << "Total deposits: " << totDepositAmt << endl;
 
-   cout << "Total withdrawals: " << totWithdrawlAmt<<endl;
+   cout << "Total withdrawals: " << totWithdrawlAmt << endl;
 
    cout << "Total interest: " << totInterest << endl;
 
@@ -90,14 +90,15 @@ startBal+=mInterest;
 
 double getDeposit() 
 
+
 {
 
-double mAmtDeposit;
+  double mAmtDeposit;
 
 
 while(true)
 
-{
+ {
 
 cout << "How much money was deposited this month?";
 
@@ -111,7 +112,7 @@ else
 
    return mAmtDeposit;
 
-}
+ }
 
  
 
@@ -144,7 +145,7 @@ else if(mAmtwithdrawl > startBal)
 
 {
 
-cout << "Please enter a number less than the balance of the account." << startBal << endl;
+cout << "Please enter a number less than the balance of the account." << startBal << ""<< endl;
 
 }
 
