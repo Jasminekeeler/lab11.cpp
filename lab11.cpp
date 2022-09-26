@@ -93,6 +93,8 @@ double getDeposit()
 {
 
 double amtDeposit;
+double amtwithdrawn;
+
 
 
 while(true)
@@ -106,27 +108,6 @@ cout << "How much money was deposited this month?: ";
     if(amtDeposit < 0)
 
    cout << "Please enter a positive number." << endl;
-
-else
-
-   return amtDeposit;
-
-}
-
- 
-
-}
-
-
-double getWithdrawl(double startDeposit)
-
-{
-
-double amtwithdrawn;
-
-while(true)
-
-{
 
 cout << "How much money was withdrawn this month?: ";
 
