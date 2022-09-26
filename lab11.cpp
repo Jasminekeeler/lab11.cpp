@@ -3,113 +3,113 @@
 #include <string> 
 
 #include <cmath> 
-
 using namespace std;
 
-double getWithdrawal;
-
-double (startDeposit);
+ double getWithdrawl(double startBal);
 
 double getDeposit(); 
-
 int main () 
 
 {
 
-   double totalDepositAmt, totalWithdrawlAmt, totalInterest;
 
-   double amtDeposit, amtWithdrawn, mInterest;
+   double totDepositAmt,totWithdrawlAmt,totInterest;
 
-   double startDeposit, annualInterestRate, startBal;
+   double mAmtDeposit,mAmtwithdrawl,mInterest;
 
-   double mInterestRate, mstart, mend;
+   double startBal,AnnInterestRate,sbal;
 
-
-   cout << "Input starting balance:" << endl; 
-
-   cin >> startDeposit; 
-
-   cout << "Input annual interest rate:" << endl; 
-
-   cin >> annualInterestRate; 
-
-   startBal = startDeposit;
-
-   mInterestRate = annualInterestRate/12;
-
-
-   for(int i = 0;i < 3;i ++) 
-
-   {
-
-    cout << "\nMonth: 1" << i+1 << "" << endl;
-
-    amtDeposit = getDeposit();
-
-    mstart = startDeposit;
-
-    startDeposit += amtDeposit;
-
-    totalDepositAmt += amtDeposit;
+   double mInterestRate,mstart,mend;
 
    
 
-    amtWithdrawn = getWithdrawal;
+   cout << "Input starting balance: "; 
 
-    startDeposit = amtWithdrawn;
+   cin >> startBal; 
 
-    totalWithdrawlAmt += amtWithdrawn;
+   cout << "Input annual interest rate: "; 
 
-    mend = startDeposit;
+   cin >> AnnInterestRate; 
 
-    mInterest = ((mstart+mend)/2) * (mInterestRate/100);
+   sbal=startBal;
 
-    startDeposit += mInterest;
+   mInterestRate=AnnInterestRate/12;
 
-    totalInterest += mInterest;
+
+   for(int i=0;i<3;i++) 
+
+   {
+       
+
+    cout << "\nMonth#" << i+1 << " :" << endl;
+
+    mAmtDeposit=getDeposit();
+
+    mstart=startBal;
+
+    startBal+=mAmtDeposit;
+
+    totDepositAmt+=mAmtDeposit;
+
+   
+
+    mAmtwithdrawl=getWithdrawl(startBal);
+
+    startBal-=mAmtwithdrawl;
+
+    totWithdrawlAmt+=mAmtwithdrawl;
+
+    mend=startBal;
+
+    mInterest=((mstart+mend)/2)*(mInterestRate/100);
+
+    startBal+=mInterest;
+
+    totInterest+=mInterest;
 
    }
 
-  {
 
-   cout << "How much money was deposited this month?" << startBal << endl;
-   cout << "How much money was withdrawn this month?" << amtWithdrawn << endl;
-   cout << "Starting balance: " << totalDepositAmt << endl;
+   cout << "Starting balance: " << sbal << endl;
 
-   cout << "Total withdrawals: " << totalWithdrawlAmt << endl;
+   cout << "Total deposits: "<< totDepositAmt << endl;
 
-   cout << "Total interest: " << totalInterest << endl;
+   cout << "Total withdrawals: "<< totWithdrawlAmt<<endl;
 
-   cout << "Final Balance: " << startDeposit << endl;
-    
+   cout << "Total interest: " << totInterest << endl;
+
+   cout << "Final Balance: " << startBal << endl;
+
+   
+
    return 0;
- 
-    }
 
-  }
+}
+
+ 
 
 double getDeposit() 
 
 {
 
-double amtDeposit;
+double mAmtDeposit;
 
 
 while(true)
 
 {
 
-cout << "Enter total amount deposited: ";
+cout << "How much money was deposited this month?";
 
-    cin >> amtDeposit;
+    cin >> mAmtDeposit;
 
-    if(amtDeposit < 0)
+    if(mAmtDeposit < 0)
 
-   cout << "Invalid data. Must be a positive number." << endl;
+   cout << "** Invalid.Must be positive **"<<endl;
 
 else
 
-   return amtDeposit;
+   return mAmtDeposit;
 
 }
 
@@ -118,39 +118,39 @@ else
 }
 
 
-double getWithdrawl(double startDeposit)
+double getWithdrawl(double startBal)
 
 {
 
-double amtwithdrawn;
+double mAmtwithdrawl;
 
 while(true)
 
 {
 
-cout << "Enter total amount withdrawn: ";
+cout << "How much money was withdrawn this month?";
 
-    cin >> amtwithdrawn;
+    cin >> mAmtwithdrawl;
 
-   if(amtwithdrawn < 0)
+   if(mAmtwithdrawl < 0)
 
    {
 
-    cout << "Invalid data.Must be positive" << endl;
+    cout << "Please enter a positive number." << endl;
 
 }
 
-else if(amtwithdrawn > startDeposit)
+else if(mAmtwithdrawl > startBal)
 
 {
 
-cout << "Invalid data.Withdrawl amount must be less than or equal to balance." << startDeposit << "" <<endl;
+cout << "Please enter a number less than the balance of the account." << startBal << endl;
 
 }
 
 else
 
-return amtwithdrawn;
+return mAmtwithdrawl;
 
 }
 
