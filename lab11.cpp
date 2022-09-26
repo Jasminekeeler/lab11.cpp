@@ -1,5 +1,7 @@
 #include <iostream> 
 
+#include <string>
+
 #include <cmath> 
 
 using namespace std;
@@ -23,11 +25,11 @@ int main ()
 
    
 
-  cout << "Input starting balance: "; 
+  cout << "Input starting balance: " << endl; 
 
   cin >> startBal; 
 
-  cout << "Input annual interest rate: "; 
+  cout << "Input annual interest rate: " << endl; 
 
   cin >> AnnInterestRate; 
 
