@@ -115,14 +115,13 @@ cout << "How much money was withdrawn this month?: ";
 
    if(amtwithdrawn < 0)
 
-   {
-
-    cout << "Please enter a positive number." << endl;
+   
+  cout << "Please enter a positive number." << endl;
 
 }
-
-else if(amtwithdrawn > startDeposit)
-
+  
+ if (amtwithdrawn > startDeposit)
+    
 {
 
 cout << "Please enter a number less than the balance of the account." << startDeposit << "" <<endl;
@@ -135,5 +134,5 @@ return amtwithdrawn;
 
 }
 
-}
+
 
