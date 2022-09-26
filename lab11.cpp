@@ -25,11 +25,11 @@ int main ()
    double mInterestRate, mstart, mend;
 
 
-   cout << "Enter the total amount deposited this month:"; 
+   cout << "Input starting balance:" << endl; 
 
    cin >> startDeposit; 
 
-   cout << "Enter the Annual Interest Rate:"; 
+   cout << "Input annual interest rate:" << endl; 
 
    cin >> annualInterestRate; 
 
@@ -42,7 +42,7 @@ int main ()
 
    {
 
-    cout << "\nMonthnumber" << i+1 << "" << endl;
+    cout << "\nMonth: 1" << i+1 << "" << endl;
 
     amtDeposit = getDeposit();
 
@@ -72,13 +72,13 @@ int main ()
 
   {
 
-   cout << "Starting balance at the beginning of the three-month period: " << startBal << endl;
+   cout << "How much money was deposited this month?" << startBal << endl;
+   cout << "How much money was withdrawn this month?" << amtWithdrawn << endl;
+   cout << "Starting balance: " << totalDepositAmt << endl;
 
-   cout << "Total deposits made during the three-month period: " << totalDepositAmt << endl;
+   cout << "Total withdrawals: " << totalWithdrawlAmt << endl;
 
-   cout << "Total withdrawals made during the three-month period: " << totalWithdrawlAmt << endl;
-
-   cout << "Total interest posted to the account during the three months: " << totalInterest << endl;
+   cout << "Total interest: " << totalInterest << endl;
 
    cout << "Final Balance: " << startDeposit << endl;
     
@@ -128,7 +128,7 @@ while(true)
 
 {
 
-cout << "Enter total amount withdrawl: ";
+cout << "Enter total amount withdrawn: ";
 
     cin >> amtwithdrawn;
 
