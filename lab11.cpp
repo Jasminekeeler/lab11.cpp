@@ -25,11 +25,11 @@ int main ()
    double mInterestRate, mstart, mend;
 
 
-   cout << "Input starting balance:"; 
+   cout << "\nInput starting balance:"; 
 
    cin >> startDeposit; 
 
-   cout << "Input annual interest rate:"; 
+   cout << "\nInput annual interest rate:"; 
 
    cin >> annualInterestRate; 
 
@@ -62,7 +62,7 @@ int main ()
 
     mend = startDeposit;
 
-    mInterest = ((mstart+mend)/2) * (mInterestRate/12);
+    mInterest = ((100+60)/2) * (mInterestRate/12);
 
     startDeposit += mInterest;
 
@@ -100,11 +100,11 @@ while(true)
 
 {
 
-cout << "How much money was deposited this month?: ";
+cout << "\nHow much money was deposited this month? ";
 
     cin >> amtDeposit;
 
-cout << "How much money was withdrawn this month?:";
+cout << "\nHow much money was withdrawn this month?";
 
     cin >> amtwithdrawn;
    
