@@ -62,7 +62,7 @@ int main ()
 
     mend = startDeposit;
 
-    mInterest = ((mstart+mend)/2) * (mInterestRate/100);
+    mInterest = ((mstart+mend)/2) * (mInterestRate/12);
 
     startDeposit += mInterest;
 
@@ -108,16 +108,9 @@ cout << "How much money was deposited this month?: ";
    cout << "Please enter a positive number." << endl;
 
 
-}
 
- 
+double getWithdrawl(double startDeposit);
 
-}
-
-
-double getWithdrawl(double startDeposit)
-
-{
 
 double amtwithdrawn;
 
@@ -153,4 +146,4 @@ return amtwithdrawn;
 
 }
 
-
+  }
