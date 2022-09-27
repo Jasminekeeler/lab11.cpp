@@ -22,7 +22,7 @@ int main ()
 
    double startDeposit, annualInterestRate, startBal;
 
-   double mInterestRate, mstart, mend;
+   double mstart, mend;
 
 
    cout << "\nInput starting balance:"; 
@@ -35,14 +35,14 @@ int main ()
 
    startBal = startDeposit;
 
-   mInterestRate = annualInterestRate/12;
+   
 
 
    for(int i = 0;i < 3;i ++) 
 
    {
 
-    cout << "\nMonth: " << i+1 << "" << endl;
+    cout << "\nMonth: " << i+1 << "";
 
     amtDeposit = getDeposit();
 
@@ -62,7 +62,7 @@ int main ()
 
     mend = startDeposit;
 
-    mInterest = ((100+60)/2) * (mInterestRate/12);
+    mInterest = ((100+60)/2) * (annualInterestRate/12);
 
     startDeposit += mInterest;
 
