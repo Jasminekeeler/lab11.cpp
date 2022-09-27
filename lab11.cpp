@@ -58,7 +58,7 @@ int main ()
 
     startDeposit;
 
-    totalWithdrawlAmt = amtWithdrawn;
+    totalWithdrawlAmt += amtWithdrawn;
 
     mend = startDeposit;
 
@@ -77,7 +77,7 @@ int main ()
 
    cout << "\nTotal deposits: " << amtDeposit + startDeposit << endl;
 
-   cout << "Total withdrawals: " << amtWithdrawn << endl;
+   cout << "Total withdrawals: " << startDeposit - amtWithdrawn << endl;
 
    cout << "Total interest: " << mInterest << endl;
 
