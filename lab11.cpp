@@ -1,7 +1,3 @@
-#include <iostream> 
-
-#include <string> 
-
 #include <cmath> 
 
 using namespace std;
@@ -22,7 +18,7 @@ int main ()
 
    double startDeposit, annualInterestRate, startBal;
 
-   double mstart, mend;
+   double mInterest, mstart, mend;
 
 
    cout << "\nInput starting balance:"; 
@@ -62,7 +58,7 @@ int main ()
 
     mend = startDeposit;
 
-    mInterest = ((100+120)/2) * (annualInterestRate/12);
+    mInterest = ((100+60)/2) * (mInterest/12);
 
     startDeposit += mInterest;
 
@@ -72,7 +68,7 @@ int main ()
 
   {
 
-   cout << "Starting balance: \n" << startBal;
+   cout << "\nStarting balance: " << startBal;
 
    cout << "Total deposits: " << totalDepositAmt << endl;
 
