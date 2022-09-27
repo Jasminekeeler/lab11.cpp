@@ -57,13 +57,13 @@ int main ()
 
     amtWithdrawn = getWithdrawal;
 
-    startDeposit = amtWithdrawn;
+    startDeposit;
 
     totalWithdrawlAmt += amtWithdrawn;
 
     mend = startDeposit;
 
-    mInterest = ((mend+amtDeposit)/2) * (mInterestRate);
+    mInterest = (mend+(startDeposit+amtDeposit)/2) * (mInterestRate);
 
     startDeposit += mInterest;
 
@@ -76,13 +76,13 @@ int main ()
 
    cout << "\nStarting balance: " << startBal;
 
-   cout << "Total deposits: " << totalDepositAmt << endl;
+   cout << "\nTotal deposits: " << totalDepositAmt + mstart << endl;
 
-   cout << "Total withdrawals: " << totalWithdrawlAmt << endl;
+   cout << "Total withdrawals: " << totalWithdrawlAmt + amtWithdrawn << endl;
 
-   cout << "Total interest: " << totalInterest << endl;
+   cout << "Total interest: " << mInterest << endl;
 
-   cout << "Final Balance: " << startDeposit << endl;
+   cout << "Final Balance: " << startDeposit+ amtWithdrawn << endl;
     
    return 0;
  
