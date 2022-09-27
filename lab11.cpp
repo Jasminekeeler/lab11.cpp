@@ -75,13 +75,13 @@ int main ()
 
    cout << "\nStarting balance: " << startBal;
 
-   cout << "\nTotal deposits: " << amtDeposit + startDeposit << endl;
+   cout << "\nTotal deposits: " << totalDepositAmt << endl;
 
-   cout << "Total withdrawals: " << amtDeposit - amtWithdrawn << endl;
+   cout << "Total withdrawals: " << amtWithdrawn << endl;
 
    cout << "Total interest: " << mInterest << endl;
 
-   cout << "Final Balance: " << totalDepositAmt+ amtWithdrawn << endl;
+   cout << "Final Balance: " << totalDepositAmt - amtWithdrawn << endl;
     
    return 0;
  
